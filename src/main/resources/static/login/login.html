@@ -1,0 +1,23 @@
+<div class="w3-display-container w3-display-middle w3-card-4" style="width: 55%;">
+        <div class="w3-panel w3-pale-red" ng-show="loginerror">
+            <p>Wrong username or password. Please try again</p>
+        </div>
+        <div class="w3-container w3-teal">
+            <h2>Enter Username and Password to Login</h2>
+        </div>
+            <form class="w3-container" ng-submit="loginUser()" name="loginForm">
+                <p>
+                    <label for="username">Username</label>
+                <input type="text" class="w3-input w3-border" ng-model="credentials.username" id="username"> 
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" class="w3-input w3-border" ng-model="credentials.password" id="password">
+                </p>
+                <p>
+                    <button class="w3-button w3-teal" type="submit" >Login</button>
+                    <button class="w3-button w3-pale-red" ng-click="resetForm()">Reset</button>
+                </p>
+            </form>
+</div>
+

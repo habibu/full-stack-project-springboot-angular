@@ -1,0 +1,24 @@
+<div class="w3-container">
+    <div class="w3-panel w3-pale-teal">
+        <p>Register New Item</p>
+        <p>Please maitain uniquesness of <strong>Product Name</strong></p>
+    </div>
+    <form class="w3-container" ng-submit="submitItemForm()" name="itemregForm">
+        <p>
+            <label for="product">Product</label>
+            <input type="text" class="w3-input w3-border" ng-model="item.productname">
+        </p>
+        <p>
+            <label for="price">Price</label>
+            <input type="text" class="w3-input w3-border" ng-model="item.price">
+        </p>
+        <p>
+            <label for="quantity">Quantity</label>
+            <input type="text" class="w3-input w3-border" ng-model="item.quantity">
+        </p>
+        <p>
+            <input type="submit" value="Save Item" class="w3-button w3-pale-green">
+            <button type="button" class="w3-button w3-pale-red" ng-click="resetForm()">Reset</button>
+        </p>
+    </form>
+</div>

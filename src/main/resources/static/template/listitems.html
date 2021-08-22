@@ -1,0 +1,27 @@
+<div class="w3-container">
+    <div class="w3-container w3-pale-teal">
+        <p>List of Items</p>
+    </div>
+    <table class="w3-table-all w3-hoverable">
+        <thead>
+            <tr class="w3-teal">
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th width="100">Edit</th>
+                <th width="100">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{item.productname}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price * item.quantity}}</td>
+                <td><button type="button" ng-click="editItem(item.id)" class="w3-pale-blue">Edit</button></td>
+                <td><button type="button" ng-click="deleteItem(item.id)" class="w3-pale-red">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

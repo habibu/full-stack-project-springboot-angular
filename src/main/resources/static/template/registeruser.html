@@ -1,0 +1,24 @@
+<div class="w3-container">
+    <div class="w3-panel w3-pale-teal">
+        <p>Register New User</p>
+        <p>Please maintain uniquesness <strong>Username</strong> </p>
+    </div>
+    <form class="w3-container" ng-submit="submitUserForm()" name="userregForm">
+        <p>
+            <label for="username">Username</label>
+            <input type="text" ng-model="user.name" id="username" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="address">Address</label>
+            <input type="text" ng-model="user.address" id="address" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" ng-model="user.email" id="email" class="w3-input w3-border">
+        </p>
+        <p>
+            <input type="submit" value="Register" class="w3-button w3-pale-green">
+            <button type="button" ng-click="resetForm()" class="w3-button w3-pale-red">Reset</button>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="w3-container">
+    <div class="w3-container w3-pale-red" ng-if="errorMessage">
+        {{errorMessage}}
+    </div>
+    <div class="w3-panel w3-pale-green">
+        <p>Update Existing User</p>
+        <p>Please maintain <strong>uniquesness of Username</strong></p>
+    </div>
+    <form ng-submit="submitUserForm()" name="userregisterForm" class="w3-container">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" ng-model="user.name" id="username" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="address">Address</label>
+            <input type="text" ng-model="user.address" id="address" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" ng-model="user.email" class="w3-input w3-border" id="email">
+        </p>
+        <p>
+            <input type="submit" value="Update User" class="w3-btn w3-pale-green">
+            <button type="button" ng-click="cancelUserForm()" class="w3-button w3-pale-red">Cancel</button>
+        </p>
+    </form>
+</div>

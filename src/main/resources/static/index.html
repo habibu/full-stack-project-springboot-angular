@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppinglistsystem">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <title>Shopping List System</title>
+    </head>
+    <body>
+        <div class="w3-container">
+                <div class="w3-container">
+                    <h3 class="w3-center w3-padding-48">Welcome kindly login to manage your Shopping List</h3>
+                    <div class="w3-container" ng-show="!authenticated">
+                        <a href="#/login"></a>
+                    </div>
+                </div>
+                <div ng-show="authenticated">
+                    <div class="w3-bar w3-grey">
+                            <div class="w3-top w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: none;" id="mySidebar">
+                                <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+                            
+                                    <a href="#/" class="w3-bar-item w3-button">Home</a>
+                                    <div class="w3-dropdown-hover">
+                                        <button class="w3-button">Manage User</button>
+                                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                            <a href="#/register-new-user" class="w3-bar-item w3-button">User Registration</a>
+                                            <a href="#/list-all-users" class="w3-bar-item w3-button">All Users</a>
+                                        </div>
+                                    </div>
+                                    <div class="w3-dropdown-hover">
+                                        <button class="w3-button">Manage Shopping List</button>
+                                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                            <a href="#/register-item" class="w3-bar-item w3-button">Item Registration</a>
+                                            <a href="#/list-all-items"  class="w3-bar-item w3-button">Items List</a>
+                                        </div>
+                                    </div>
+                                    <a href="#/logout" class="w3-bar-item w3-button">Logout</a>
+                            </div>
+                        
+                        <div id="main"> 
+                            <div class="w3-teal">
+                                <button id="openNav" class="w3-teal w3-large" onclick="w3_open()">&#9776</button>
+                                <div class="w3-container">
+                                    <h3>Shopping List Registration System</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-view></div>
+        </div>
+        
+        <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+        <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+        <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+        <script src="/js/myApp.js"></script>
+        <script src="/js/controller.js"></script>
+        <script src="/js/navigationbar.js"></script>
+        <link rel="stylesheet" href="/css/myApp.css"> 
+        <link rel="stylesheet" href="/css/w3.css">
+        
+    </body>
+
+</html>

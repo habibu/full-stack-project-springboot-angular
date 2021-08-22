@@ -1,0 +1,28 @@
+<div class="w3-container">
+    <div class="w3-container w3-pale-red" ng-if="errorMessage">
+        {{errorMessage}}
+    </div>
+    <div class="w3-container w3-pale-green">
+        <p>Update Existing Item</p>
+        <p>Please maintain <strong>uniquesness of product name</strong></p>
+    </div>
+    <form ng-submit="submitItemForm()" class="w3-container"  name="itemregForm">
+        <p>
+            <label for="productname">Product</label>
+            <input type="text" ng-model="item.productname" id="productname" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="price">Price</label>
+            <input type="text" ng-model="item.price" id="price" class="w3-input w3-border">
+        </p>
+        <p>
+            <label for="quantity">Quantity</label>
+            <input type="text" ng-model="item.quantity" id="quantity" class="w3-input w3-border">
+        </p>
+        <p>
+            <input type="button" value="Update Item" class="w3-button w3-pale-green">
+            <button type="button" ng-click="cancelItemForm()" class="w3-button w3-pale-red">Cancel</button>
+        </p>
+
+    </form>
+</div>

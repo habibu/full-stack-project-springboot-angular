@@ -1,0 +1,25 @@
+<div class="w3-container">
+    <div class="w3-container w3-pale-teal">
+        <p>List of Users</p>
+    </div>
+    <table class="w3-table w3-stripped w3-border w3-hoverable">
+        <thead>
+            <tr class="w3-teal">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th width="100">Edit</th>
+                <th with=100>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+                <td><button type="button" class="w3-pale-blue" ng-click="editUser(user.id)">Edit</button></td>
+                <td><button type="button" class="w3-pale-red" ng-click="deleteUser(user.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
