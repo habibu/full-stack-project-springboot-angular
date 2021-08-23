@@ -1,10 +1,10 @@
-<div class="w3-container">
+<div class="w3-display-container w3-display-middle w3-card-4" style="width: 71%;">
     <div class="w3-container w3-pale-red" ng-if="errorMessage">
         {{errorMessage}}
     </div>
     <div class="w3-container w3-pale-green">
         <p>Update Existing Item</p>
-        <p>Please maintain <strong>uniquesness of product name</strong></p>
+        <p>Please maintain <strong>uniqueness of product name</strong></p>
     </div>
     <form ng-submit="submitItemForm()" class="w3-container"  name="itemregForm">
         <p>
@@ -20,7 +20,7 @@
             <input type="text" ng-model="item.quantity" id="quantity" class="w3-input w3-border">
         </p>
         <p>
-            <input type="button" value="Update Item" class="w3-button w3-pale-green">
+            <input type="submit" value="Update Item" class="w3-button w3-pale-green">
             <button type="button" ng-click="cancelItemForm()" class="w3-button w3-pale-red">Cancel</button>
         </p>
 
