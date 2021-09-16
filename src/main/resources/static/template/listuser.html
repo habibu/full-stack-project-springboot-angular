@@ -2,7 +2,7 @@
     <div class="w3-container w3-pale-teal">
         <p>List of Users</p>
     </div>
-    <table class="w3-table w3-stripped w3-border w3-hoverable">
+    <table class="w3-table-all w3-hoverable">
         <thead>
             <tr class="w3-teal">
                 <th>Name</th>
@@ -17,8 +17,8 @@
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.address}}</td>
-                <td><button type="button" class="w3-pale-blue" ng-click="editUser(user.id)">Edit</button></td>
-                <td><button type="button" class="w3-pale-red" ng-click="deleteUser(user.id)">Delete</button></td>
+                <td><button type="button" class="w3-pale-blue w3-button" ng-click="editUser(user.id)">Edit</button></td>
+                <td><button type="button" class="w3-pale-red w3-button" ng-click="deleteUser(user.id)">Delete</button></td>
             </tr>
         </tbody>
     </table>

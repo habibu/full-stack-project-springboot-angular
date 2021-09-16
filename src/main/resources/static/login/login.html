@@ -1,10 +1,13 @@
-<div class="w3-display-container w3-display-middle w3-card-4" style="width: 55%;">
+<div class="w3-display-container w3-display-middle w3-card-4" style="width: 45%;">
         <div class="w3-panel w3-pale-red" ng-show="loginerror">
             <p>Wrong username or password. Please try again</p>
         </div>
-        <div class="w3-container w3-teal">
-            <h2>Enter Username and Password to Login</h2>
-        </div>
+        <header class="w3-container w3-teal">
+            <div class="w3-container">
+                <h5 class="w3-center">Welcome kindly login to manage your Shopping List</h5>
+            </div>
+            <p>Enter Username and Password to Login</p>
+        </header>
             <form class="w3-container" ng-submit="loginUser()" name="loginForm">
                 <p>
                     <label for="username">Username</label>
